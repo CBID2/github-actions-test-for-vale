@@ -14,12 +14,14 @@ jobs:
   compliance:
     uses: open-sauced/hot/.github/workflows/compliance.yml@main
     name: reviewdog
+    on: [pull_request]
+
   vale:
     name: runner / vale
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: linting 
+      - name: linting
         uses: errata-ai/vale-action@reviewdog
         files: "* .md"
