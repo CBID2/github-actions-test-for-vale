@@ -1,11 +1,8 @@
-name: "Compliance"
+name: Compliance
 
 on:
   pull_request_target:
-    types:
-      - opened
-      - edited
-      - synchronize
+    types: [opened, edited]
 
 permissions:
   pull-requests: write
@@ -14,14 +11,14 @@ jobs:
   compliance:
     uses: open-sauced/hot/.github/workflows/compliance.yml@main
     name: reviewdog
-    on: [pull_request]
 
   vale:
     name: runner / vale
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: linting 
+      - uses: actions/checkout@v3
+
+      - name: linting
         uses: errata-ai/vale-action@reviewdog
-        files: "* .md"
+        with:
+          files: "*.md"
