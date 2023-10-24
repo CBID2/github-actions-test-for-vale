@@ -1,3 +1,3 @@
 # github-actions-test
 
-testy mctesterson. tdd is awesome
+testy mctesterson. tdd is awesome.
