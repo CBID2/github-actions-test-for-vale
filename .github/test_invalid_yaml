@@ -1,0 +1,9 @@
+list:
+ - 1
+   - 2
+ -3
+
+multiline-string: this is not
+supposed to be like this
+
+unclosedArray: ["test"
