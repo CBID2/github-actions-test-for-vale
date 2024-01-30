@@ -10,9 +10,6 @@ on:
 permissions:
   pull-requests: write
 
-# The error here is the two job keys.
-# The other issues were similar, and one indentation issue - Kyle / TechSquidTV
-# fixed
 jobs:
   compliance:
     uses: open-sauced/hot/.github/workflows/compliance.yml@main
