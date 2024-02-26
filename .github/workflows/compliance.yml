@@ -19,8 +19,6 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: all
-          filter_mode: diff_context
-          vale_flags: "--no-exit --minAlertLevel=error"
           reporter: github-pr-check
           fail_on_error: true
         env:
