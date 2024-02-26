@@ -21,3 +21,4 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: "docs"
+          fail_on_error: true
