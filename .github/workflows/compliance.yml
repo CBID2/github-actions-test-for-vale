@@ -23,8 +23,7 @@ jobs:
           vale_flags: "--no-exit --minAlertLevel=error"
           reporter: github-pr-check
           fail_on_error: true
-
-          env:
+        env:
           # Required, set by GitHub actions automatically:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
