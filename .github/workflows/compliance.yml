@@ -21,7 +21,7 @@ jobs:
           files: all
           reporter: github-pr-check
           fail_on_error: true 
-          filter_mode:nofilter
+          filter_mode: nofilter
         env:
           # Required, set by GitHub actions automatically:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
