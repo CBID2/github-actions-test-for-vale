@@ -11,8 +11,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  compliance:
-    uses: open-sauced/hot/.github/workflows/compliance.yml@main
   vale:
     name: runner / vale
     runs-on: ubuntu-latest
@@ -20,5 +18,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: errata-ai/vale-action@reviewdog
         with:
-          files: "docs"
-          fail_on_error: true
+          files: all
+          reporter: github-pr-check
+          fail_on_error: true 
+          filter_mode: nofilter
+        env:
+          # Required, set by GitHub actions automatically:
+          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          REVIEWDOG_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
