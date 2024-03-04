@@ -21,4 +21,4 @@ jobs:
           files: all
           reporter: github-pr-check
           fail_on_error: true
-          filter_mode: added
+          filter_mode: no filter
