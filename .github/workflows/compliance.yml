@@ -19,6 +19,6 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: all
-          reporter: github-pr-check
+          reporter: github-pr-review
           fail_on_error: true
           filter_mode: added
